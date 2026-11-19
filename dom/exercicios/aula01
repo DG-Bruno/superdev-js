@@ -1,0 +1,34 @@
+Altere a function no botao alterar titulo para que não permita Titulo vazio,
+caso seja vazio deve manter o valor atual.
+
+  const novoTitulo = inputNovoTitulo.value.trim();
+
+    if (novoTitulo === "") {
+        return;
+    }
+
+======================================================================================
+
+Substitua a criação do item unico por um forEach que crie um li para cada nome produto
+Caderno, Caneta, Mochila
+
+const produtos = ["Caderno", "Caneta", "Mochila"];
+
+const lista = document.querySelector("#lista-produtos");
+
+produtos.forEach((produto) => {
+    const item = document.createElement("li");
+
+    item.textContent = produto;
+
+    lista.appendChild(item);
+})
+
+======================================================================================
+
+1. Exiba um item de lista para cada produto, com nome e preço.
+2. Calcule o total com `reduce` e mostre-o na página.
+3. Faça o botão de ordem crescente mostrar os produtos do menor para o maior preço.
+4. Faça o botão de ordem decrescente mostrar os produtos do maior para o menor preço.
+5. Mantenha a alteração do título e o destaque do total funcionando.
+6. Garanta que repetir os cliques de ordenação não duplique os itens.
